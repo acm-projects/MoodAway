@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "MoodAway",
+    "slug": "MoodAway",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "MoodAway"
+}
