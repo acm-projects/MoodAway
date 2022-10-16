@@ -20,11 +20,11 @@ function App() {
           headerStyle:
             {backgroundColor: '#00352F'},
           headerTitleStyle:
-            {fontFamily: 'LexendExa-Medium', fontSize: 23, color: 'white'},
+            { fontSize: 23, color: 'white'},
           tabBarStyle: 
             {backgroundColor: '#00352F'},
           tabBarLabelStyle: {
-            fontFamily: 'LexendExa-Medium', color: 'white'
+            color: 'white'
           }
           }}>
         <Tab.Screen name = "Home" component = {Home}/>
