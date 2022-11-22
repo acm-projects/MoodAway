@@ -1,0 +1,6 @@
+module Pods_MoodAway_MoodAwayTests {
+  umbrella header "Pods-MoodAway-MoodAwayTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

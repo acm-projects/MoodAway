@@ -2,39 +2,39 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "assets/LexendExa-Black.ttf",
+      "path": "assets/fonts/LexendExa-Black.ttf",
       "sha1": "b1549252d454bee5cefb1e24c23be642e289d668"
     },
     {
-      "path": "assets/LexendExa-Bold.ttf",
+      "path": "assets/fonts/LexendExa-Bold.ttf",
       "sha1": "74fe3d08d254ad5b56aa8f40ebfa5fcd3688f4fd"
     },
     {
-      "path": "assets/LexendExa-ExtraBold.ttf",
+      "path": "assets/fonts/LexendExa-ExtraBold.ttf",
       "sha1": "31be2f53e70824b0d4feef3214bf990e2206dd23"
     },
     {
-      "path": "assets/LexendExa-ExtraLight.ttf",
+      "path": "assets/fonts/LexendExa-ExtraLight.ttf",
       "sha1": "4270af1dbc877f751bcedc16b57c67f94e9ef988"
     },
     {
-      "path": "assets/LexendExa-Light.ttf",
+      "path": "assets/fonts/LexendExa-Light.ttf",
       "sha1": "aa8894b6e603b754bb1b08cb47a7a3bc8614641d"
     },
     {
-      "path": "assets/LexendExa-Medium.ttf",
+      "path": "assets/fonts/LexendExa-Medium.ttf",
       "sha1": "4a67e076e80f5c70af268f5e49d48070214aaa5a"
     },
     {
-      "path": "assets/LexendExa-Regular.ttf",
+      "path": "assets/fonts/LexendExa-Regular.ttf",
       "sha1": "e02725dad1f8155696037e9b6fd2f099c8e36e5e"
     },
     {
-      "path": "assets/LexendExa-SemiBold.ttf",
+      "path": "assets/fonts/LexendExa-SemiBold.ttf",
       "sha1": "89b10c6063c064f9cab163f2edb475e728c94005"
     },
     {
-      "path": "assets/LexendExa-Thin.ttf",
+      "path": "assets/fonts/LexendExa-Thin.ttf",
       "sha1": "09e821e7f5b6dbb52024aea59c3eb0d7a11bdbf2"
     }
   ]

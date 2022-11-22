@@ -1,0 +1,13 @@
+current directory: /Users/nk/MoodAway/vendor/bundle/ruby/2.6.0/gems/json-2.6.1/ext/json
+/Users/nk/.rvm/rubies/ruby-2.6.0/bin/ruby -I /Users/nk/.rvm/rubies/ruby-2.6.0/lib/ruby/site_ruby/2.6.0 -r ./siteconf20221031-87428-cn2iwu.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nk/MoodAway/vendor/bundle/ruby/2.6.0/gems/json-2.6.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/nk/MoodAway/vendor/bundle/ruby/2.6.0/gems/json-2.6.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/nk/MoodAway/vendor/bundle/ruby/2.6.0/gems/json-2.6.1/ext/json
+make "DESTDIR=" install
