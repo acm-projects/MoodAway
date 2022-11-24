@@ -4,6 +4,12 @@ import Journal from './Journal';
 import React, { useState } from "react";
 import { FlatList, ScrollView, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, Linking, View, Alert} from "react-native";
 import prompt from "@powerdesigninc/react-native-prompt";
+import database, { FirebaseDatabaseTypes } from '@react-native-firebase/database';
+import getFirestore from '@react-native-firebase/database';
+import { set } from 'react-native-reanimated';
+import List from './Journal-entry';
+import { getDatabase, ref, child, get } from "@react-native-firebase/database";
+
 // function promptMe(){
 //   var num = prompt("Please provide a rating for your mood between 1-10");
 //   Alert.alert (userAdjective);
@@ -76,7 +82,7 @@ const DATA = [
 ];
 const Mood = ({nm}) => {
   let content
-  if (nm == '2') {
+  if (nm == 'sadness') {
     content = <Text style={{marginTop: 25,
       color: "blue",
       alignSelf: 'center',
@@ -84,7 +90,7 @@ const Mood = ({nm}) => {
       fontSize: 25,
       marginLeft: 15,
       marginRight: 15 }}>Sad</Text>
-  } else if (nm == '0') {
+  } else if (nm == "joy") {
     content = <Text style={{ marginTop: 25,
       color: "orange",
       alignSelf: 'center',
@@ -92,7 +98,7 @@ const Mood = ({nm}) => {
       fontSize: 25,
       marginLeft: 15,
       marginRight: 15  }}>Happy</Text>
-  } else if (nm == '4') {
+  } else if (nm == 'anger') {
     content = <Text style={{ marginTop: 25,
       color: "red",
       alignSelf: 'center',
@@ -101,7 +107,7 @@ const Mood = ({nm}) => {
       marginLeft: 15,
       marginRight: 15  }}>Angry</Text>
   }
-  else if (nm == '3') {
+  else if (nm == 'disgust') {
     content = <Text style={{ marginTop: 25,
       color: "green",
       alignSelf: 'center',
@@ -110,7 +116,7 @@ const Mood = ({nm}) => {
       marginLeft: 15,
       marginRight: 15  }}>Disgusted</Text>
   }
-  else if (nm == '5') {
+  else if (nm == 'fear') {
     content = <Text style={{ marginTop: 25,
       color: "purple",
       alignSelf: 'center',
@@ -119,7 +125,7 @@ const Mood = ({nm}) => {
       marginLeft: 15,
       marginRight: 15  }}>Fearful</Text>
   }
-  else if (nm == '1') {
+  else if (nm == 'surprise') {
     content = <Text style={{ marginTop: 25,
       color: "brown",
       alignSelf: 'center',
@@ -153,9 +159,19 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
     <Text style={[styles.source, textColor]}>{item.source}</Text>
   </TouchableOpacity>
 );
-const nm=3;
+
+let itemsRef = database().ref('Emotions');  
+var childData;
+itemsRef.on('child_added', function(snapshot) {
+snapshot.forEach(function(childSnapshot)
+{
+ childData = childSnapshot.val();
+})
+response = snapshot.val();
+}); 
+
 const Analysis = () => {
-const number=nm;
+const emote=childData;
 const navigation = useNavigation();
 const [selectedId, setSelectedId] = useState(null);
 const renderItem = ({ item }) => {
@@ -174,7 +190,7 @@ return (
   <>
   <Text style={styles.heading}>Today's Mood</Text>
   <View>
-    <Mood nm={number} />
+    <Mood nm={emote} />
   </View>
   {/* <AppButton1st/> */}
   <Text style={styles.text}>Scroll for tips and articles to better understand your mood</Text>

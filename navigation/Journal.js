@@ -11,7 +11,7 @@ import { getDatabase, ref, child, get } from "@react-native-firebase/database";
 import { panGestureHandlerCustomNativeProps } from 'react-native-gesture-handler/lib/typescript/handlers/PanGestureHandler';
 
 
-global.foo = "hello";
+
 
 const Journal = () => {
     const [journalText, setJournalText] = useState(null);
@@ -43,22 +43,22 @@ const Journal = () => {
           
         });     
       };
-      let addWork = journalEntry => {
-        database().ref('/Working').push({
-          name: journalEntry,
-          
-        });     
-      };
+      
 
     const [name, onChangeText] = React.useState("");
     const [emotion, setEmotion] = React.useState("");
-    var respond="him";
-    global.foo = respond;
+    var respond;
+    
 
     
    const onPress = async() => {
+
         addItem(name);
-        navigation.navigate('Analysis')
+
+        
+
+
+        
 
     const options = {
         method: 'GET',
@@ -75,70 +75,63 @@ const Journal = () => {
     };
 
     await axios.request(options).then(function (response) {
-        
+
         addEmotion(response.data.emotions_detected[0]);
-
-        let joy = response.data.emotion_scores.joy;
-        let surprise = response.data.emotion_scores.surprise;
-        let sadness = response.data.emotion_scores.sadness;
-        let disgust = response.data.emotion_scores.disgust;
-        let anger = response.data.emotion_scores.anger;
-        let fear = response.data.emotion_scores.fear;
-        let total = joy + surprise + sadness + disgust + anger + fear;
-        joy /= total;
-        surprise /= total;
-        sadness /= total;
-        disgust /= total;
-        anger /= total;
-        fear /= total;
-        let emotions =  [joy, surprise, sadness, disgust, anger, fear];
-        let mainEmotion = [0, 0, 0, 0, 0, 0];
-        let secondaryEmotions = [0, 0, 0, 0, 0, 0];
-
-        for (let i = 0; i < emotions.length; i++) {
-            global.foo = "hi";
-            if (emotions[i] > .8) {
-                mainEmotion[i] = emotions[i];
-                alert(emotionNames[i] + ": " + mainEmotion[i]);
-                break;
-            }
-            else if (emotions[i] > .3) {
-                secondaryEmotions[i] = emotions[i];
-            }
-        }
-
-            for (let i = 0; i < secondaryEmotions.length; i++) {
-                if (secondaryEmotions[i] > 0) {
-                    alert(emotionNames[i] + ": " + secondaryEmotions[i]);
-                }
-            }
-            for(let i = 0; i < mainEmotion.length; i++)
-            {
-                if(mainEmotion[i]>0)
-                {
-                    addValue(i);
-                    
-                    
-                }
-                
-            }
-            });
+        // for(let i = 0; i < 1; i++)
+        // {
+           
+        //         addValue(i)
+            
+            
+        // }
 
 
+        // let joy = response.data.emotion_scores.joy;
+        // let surprise = response.data.emotion_scores.surprise;
+        // let sadness = response.data.emotion_scores.sadness;
+        // let disgust = response.data.emotion_scores.disgust;
+        // let anger = response.data.emotion_scores.anger;
+        // let fear = response.data.emotion_scores.fear;
+        // let total =  joy + surprise + sadness + disgust + anger + fear;
+        // joy /= total;
+        // surprise /= total;
+        // sadness /= total;
+        // disgust /= total;
+        // anger /= total;
+        // fear /= total;
+        // let emotions =  [joy, surprise, sadness, disgust, anger, fear];
+        // let mainEmotion = [0,0,0,0,0,0];
+        // let secondaryEmotions = [0, 0, 0, 0, 0, 0];
+
+       
+        // for (let i = 0; i < emotions.length; i++) {
+            
+        //     if (emotions[i] > .8) {
+        //         mainEmotion[i] = emotions[i];
+        //         alert(emotionNames[i] + ": " + mainEmotion[i]);
+        //         break;
+        //     }
+        //     else if (emotions[i] > .3) {
+        //         secondaryEmotions[i] = emotions[i];
+        //     }
+        // }
+
+        //     for (let i = 0; i < secondaryEmotions.length; i++) {
+        //         if (secondaryEmotions[i] > 0) {
+        //             alert(emotionNames[i] + ": " + secondaryEmotions[i]);
+        //         }
+        //     }
+
+            
+
+
+         
+        //      });
+            
            
 
-        let itemsRef = database().ref('/Values');
-        
-    
-        itemsRef.on('value', (snapshot) => {
-        respond = snapshot.val();
-        respond="hi"
-        global.foo = "hi";
-        
-        addWork(respond);
-    }, (errorObject) => {
-      console.log('The read failed: ' + errorObject.name);
-    }); 
+      navigation.navigate('Analysis')
+     }); 
 
 
 
@@ -148,7 +141,7 @@ const Journal = () => {
         <View style={styles.container}> 
             <TextInput style={styles.title} multiline={true} placeholder="New Entry" />
           
-            { <Text style={styles.text}>{global.foo}</Text> }
+            { <Text style={styles.text}>{date}</Text> }
             <TextInput style={styles.journalEntry}   onChangeText={(journalText) => setJournalText(journalText)} value={journalText} placeholder = {"Compose your entry here..."} />
         <TextInput style={styles.journalEntry}   multiline = {true} onChangeText={journalText => onChangeText(journalText) }  placeholder = {"Compose your entry here..."}/>
             <TouchableOpacity

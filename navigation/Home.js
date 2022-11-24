@@ -3,6 +3,12 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button} from 'reac
 import Journal from './Journal';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import database, { FirebaseDatabaseTypes } from '@react-native-firebase/database';
+import getFirestore from '@react-native-firebase/database';
+import { set } from 'react-native-reanimated';
+import List from './Journal-entry';
+import { getDatabase, ref, child, get } from "@react-native-firebase/database";
+
 
 const AppButton = () => {
   const title = "Create Entry";
@@ -14,13 +20,20 @@ const AppButton = () => {
   </TouchableOpacity>
   )
  };
+ 
+
+
+
+ 
+
+
 
 const Home = () => {
   const title = "Create Entry";
   const navigation = useNavigation();
    return (
      <><View>
-      <Text style={styles.text1}>Welcome Back, Francis</Text>
+      
        <Text style={styles.text}>Create a Journal</Text>
        <Text style={styles.text2}>Entry to get Started</Text>
 
