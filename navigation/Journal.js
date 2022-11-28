@@ -45,7 +45,7 @@ const Journal = () => {
       };
       
 
-    const [name, onChangeText] = React.useState("");
+    const [name, onText] = React.useState("");
     const [emotion, setEmotion] = React.useState("");
     var respond;
     
@@ -139,16 +139,16 @@ const Journal = () => {
     };
     return (
         <View style={styles.container}> 
-            <TextInput style={styles.title} multiline={true} placeholder="New Entry" />
-          
+            <TextInput style={styles.journalEntry}   multiline = {true} onChangeText={(journalText) => setJournalText(journalText)} onSubmitEditing={journalText => onChangeText(journalText) } value={journalText} placeholder = {"Compose your entry here..."} />
+            <TextInput style={styles.title} multiline = {true} placeholder = "New Entry"/>
             { <Text style={styles.text}>{date}</Text> }
-            <TextInput style={styles.journalEntry}   onChangeText={(journalText) => setJournalText(journalText)} value={journalText} placeholder = {"Compose your entry here..."} />
-        <TextInput style={styles.journalEntry}   multiline = {true} onChangeText={journalText => onChangeText(journalText) }  placeholder = {"Compose your entry here..."}/>
-            <TouchableOpacity
-                style={styles.button}
-                onPress={onPress}>
-                <Text style={styles.buttonText}>Generate Analysis</Text>
-            </TouchableOpacity>
+            
+        <TouchableOpacity
+            style = {styles.button}
+            onPress={addItem(journalText)}
+            onPressIn = {onPress}>
+            <Text style={styles.buttonText}>Generate Analysis</Text>
+        </TouchableOpacity>
         </View>
     );
 }

@@ -128,7 +128,7 @@ const Mood = ({nm}) => {
   else if (nm == 'surprise') {
     content = <Text style={{ marginTop: 25,
       color: "brown",
-      alignSelf: 'center',
+      alignSelf: 'center',  
      // fontFamily: 'LexendExa-Regular',
       fontSize: 25,
       marginLeft: 15,
