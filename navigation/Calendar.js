@@ -26,7 +26,26 @@ const Calendar = () => {
                 '2022-11-20': {disabled: true, startingDay: true, color: '#FB5858', endingDay: true, textColor: 'black'},
                 '2022-11-22': {disabled: true, startingDay: true, color: '#FB5858', endingDay: true, textColor: 'black'},
                 '2022-11-23': {disabled: true, startingDay: true, color: '#B090F3', endingDay: true, textColor: 'black'},
-                '2022-11-24': {disabled: true, startingDay: true, color: '#B5CEB0', endingDay: true, textColor: 'black'}
+                '2022-11-24': {disabled: true, startingDay: true, color: '#B5CEB0', endingDay: true, textColor: 'black'},
+                '2022-11-29': {disabled: true, startingDay: true, color: '#B090F3', endingDay: true, textColor: 'black'},
+                '2022-10-02': {disabled: true, startingDay: true, color: '#A6C0F2', endingDay: true, textColor: 'black'},
+                '2022-10-03': {disabled: true, startingDay: true, color: '#A6C0F2', endingDay: true, textColor: 'black'},
+                '2022-10-04': {disabled: true, startingDay: true, color: '#B5CEB0', endingDay: true, textColor: 'black'},
+                '2022-09-05': {disabled: true, startingDay: true, color: '#FFED8E', endingDay: true, textColor: 'black'},
+                '2022-10-07': {disabled: true, startingDay: true, color: '#FFED8E', endingDay: true, textColor: 'black'},
+                '2022-09-09': {disabled: true, startingDay: true, color: '#FB5858', endingDay: true, textColor: 'black'},
+                '2022-09-10': {disabled: true, startingDay: true, color: '#FB5858', endingDay: true, textColor: 'black'},
+                '2022-09-12': {disabled: true, startingDay: true, color: '#B090F3', endingDay: true, textColor: 'black'},
+                '2022-09-13': {disabled: true, startingDay: true, color: '#B5CEB0', endingDay: true, textColor: 'black'},
+                '2022-09-14': {disabled: true, startingDay: true, color: '#A6C0F2', endingDay: true, textColor: 'black'},
+                '2022-08-15': {disabled: true, startingDay: true, color: '#A6C0F2', endingDay: true, textColor: 'black'},
+                '2022-08-16': {disabled: true, startingDay: true, color: '#B5CEB0', endingDay: true, textColor: 'black'},
+                '2022-08-18': {disabled: true, startingDay: true, color: '#FFED8E', endingDay: true, textColor: 'black'},
+                '2022-08-19': {disabled: true, startingDay: true, color: '#FFED8E', endingDay: true, textColor: 'black'},
+                '2022-10-20': {disabled: true, startingDay: true, color: '#FB5858', endingDay: true, textColor: 'black'},
+                '2022-10-22': {disabled: true, startingDay: true, color: '#FB5858', endingDay: true, textColor: 'black'},
+                '2022-10-23': {disabled: true, startingDay: true, color: '#B090F3', endingDay: true, textColor: 'black'},
+                '2022-08-24': {disabled: true, startingDay: true, color: '#B5CEB0', endingDay: true, textColor: 'black'}
             }}
                 
             theme={{

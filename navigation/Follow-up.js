@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     },
     text: {
         top: '7%',
-        //fontFamily: 'LexendExa-Regular',
+        fontFamily: 'LexendExa-Regular',
         alignSelf: 'center',
         position: 'absolute',
         color: 'black',
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         alignSelf: 'center',
         fontSize: 20,
-        //fontFamily: 'LexendExa-Medium'
+        fontFamily: 'LexendExa-Medium'
     },
     journalEntry: {
         height: '72%',
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
         width: '97%',
         position: 'relative',
         justifyContent: 'space-evenly',
-       // fontFamily: 'LexendExa-Medium'
+        fontFamily: 'LexendExa-Medium'
     },
     button: {
         alignSelf: 'center',
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     buttonText: {
         alignSelf: 'center',
         color: '#fff',
-        //fontFamily: 'LexendExa-Regular',
+        fontFamily: 'LexendExa-Regular',
     }
 });
 

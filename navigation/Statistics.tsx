@@ -2,13 +2,13 @@ import * as React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { VictoryChart,VictoryGroup, VictoryBar, VictoryTheme, VictoryLabel} from 'victory-native';
-const DataJuly = {
-    actual: [
-        {x: '0-3', y: 2},
-        {x: '4-7', y: 3},
-        {x: '8-10', y: 5}
-    ],
-    }
+// const DataJuly = {
+//     actual: [
+//         {x: '0-3', y: 2},
+//         {x: '4-7', y: 3},
+//         {x: '8-10', y: 5}
+//     ],
+//     }
 const DataAug = {
     actual: [
         {x: '0-3', y: 1},
@@ -18,40 +18,40 @@ const DataAug = {
     }
 const DataSept = {
     actual: [
-        {x: '0-3', y: 2},
-        {x: '4-7', y: 9},
-        {x: '8-10', y: 7}
+        {x: '0-3', y: 1},
+        {x: '4-7', y: 2},
+        {x: '8-10', y: 3}
     ],
     }
 const DataOct = {
 actual: [
-    {x: '0-3', y: 3},
-    {x: '4-7', y: 12},
-    {x: '8-10', y: 5}
+    {x: '0-3', y: 4},
+    {x: '4-7', y: 1},
+    {x: '8-10', y: 2}
 ],
 }
 const DataNov = {
     actual: [
-        {x: '0-3', y: 0},
-        {x: '4-7', y: 0},
-        {x: '8-10', y: 1}
+        {x: '0-3', y: 4},
+        {x: '4-7', y: 5},
+        {x: '8-10', y: 10}
     ],
     }
-const July: React.FC = () => {
-    return(
-     <View>
-        <VictoryChart  domainPadding={23}  >
-            <VictoryGroup>
-                <VictoryBar  data={DataJuly.actual}
-                style={{ data: { fill: "#00352F" } }}
-                alignment="middle"
-                labels={({ datum }) => `${datum.y}`}
-                />
-            </VictoryGroup>
-        </VictoryChart>
-     </View>
-    )
-    }
+// const July: React.FC = () => {
+//     return(
+//      <View>
+//         <VictoryChart  domainPadding={23}  >
+//             <VictoryGroup>
+//                 <VictoryBar  data={DataJuly.actual}
+//                 style={{ data: { fill: "#00352F" } }}
+//                 alignment="middle"
+//                 labels={({ datum }) => `${datum.y}`}
+//                 />
+//             </VictoryGroup>
+//         </VictoryChart>
+//      </View>
+//     )
+//     }
 const August: React.FC = () => {
     return(
      <View>
@@ -117,21 +117,6 @@ const Statistics = () => {
         <ScrollView>
         <Text style={styles.heading}>Here's how you rated your</Text>
         <Text style={styles.heading1}>days this year:</Text>
-        <Text style={styles.month1}>January 2022</Text>
-        <Text style={styles.noData}>No Data</Text>
-        <Text style={styles.months}>February 2022</Text>
-        <Text style={styles.noData}>No Data</Text>
-        <Text style={styles.months}>March 2022</Text>
-        <Text style={styles.noData}>No Data</Text>
-        <Text style={styles.months}>April 2022</Text>
-        <Text style={styles.noData}>No Data</Text>
-        <Text style={styles.months}>May 2022</Text>
-        <Text style={styles.noData}>No Data</Text>
-        <Text style={styles.months}>June 2022</Text>
-        <Text style={styles.noData}>No Data</Text>
-        <Text style={styles.months}>July 2022</Text>
-        <July/>
-        <Text style={styles.text1}>Rating</Text>
         <Text style={styles.months}>August 2022</Text>
         <August/>
         <Text style={styles.text1}>Rating</Text>

@@ -67,7 +67,7 @@ const Journal = () => {
           text: journalText
         },
         headers: {
-          'X-RapidAPI-Key': 'fa8e044ce2msh2fc16b111e982cap1fcb9fjsn2953f7b7193f',
+          'X-RapidAPI-Key': 'xxx',
           'X-RapidAPI-Host': 'twinword-emotion-analysis-v1.p.rapidapi.com'
           
         }
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     },
     text: {
         top: '7%',
-        //fontFamily: 'LexendExa-Medium',
+        fontFamily: 'LexendExa-Medium',
         alignSelf: 'center',
         position: 'absolute',
         color: 'black',
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         alignSelf: 'center',
         fontSize: 20,
-        //fontFamily: 'LexendExa-Medium'
+        fontFamily: 'LexendExa-Medium'
     },
     journalEntry: {
         height: '72%',
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
         width: '97%',
         position: 'relative',
         justifyContent: 'space-evenly',
-       //fontFamily: 'LexendExa-Medium'
+       fontFamily: 'LexendExa-Medium'
     },
     button: {
         alignSelf: 'center',
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     buttonText: {
         alignSelf: 'center',
         color: '#fff',
-        //fontFamily: 'LexendExa-Medium',
+        fontFamily: 'LexendExa-Medium',
     }
 });
 

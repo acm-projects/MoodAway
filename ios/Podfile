@@ -27,6 +27,8 @@ target 'MoodAway' do
   )
 
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'MoodAwayTests' do
     inherit! :complete
     

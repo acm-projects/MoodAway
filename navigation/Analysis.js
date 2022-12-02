@@ -9,127 +9,181 @@ import getFirestore from '@react-native-firebase/database';
 import { set } from 'react-native-reanimated';
 import List from './Journal-entry';
 import { getDatabase, ref, child, get } from "@react-native-firebase/database";
-
+import axios from 'axios';
+import { Button } from 'react-native';
+const saved = [];
 // function promptMe(){
 //   var num = prompt("Please provide a rating for your mood between 1-10");
 //   Alert.alert (userAdjective);
 // }
 const AppButton = () => {
-  const title = "Rate Your Entry";
+  const title = "Rate Your Day";
   const navigation = useNavigation();
   return(
     <TouchableOpacity onPress={() => {
-      prompt('Rate Your Entry 1-10', null, (input)=>{console.log(input)});
+      prompt('Rate Your Day 1-10', null, (input)=>{console.log(input)});
     }}  style={styles.appButtonContainer}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
   )
  };
  const AppButton1st = () => {
-  const title = "Rate Entry";
+  const title = "Rate Day";
   const navigation = useNavigation();
   return(
 <TouchableOpacity onPress={() => {
-    prompt('Rate Your Entry 1-10', null, (input)=>{console.log(input)});
+    prompt('Rate Your Day 1-10', null, (input)=>{console.log(input)});
   }}  style={styles.appButton1stContainer}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
   )
  };
-const DATA = [
-    {
-        id: '1',
-        title: 'How to Become Less Angry',
-        source: 'New York Times',
-        date: '02/03/2022',
-        link: 'https://www.nytimes.com/2019/01/23/magazine/how-to-become-less-angry.html#:~:text=Learn%20relaxation%20and%20mindfulness%20techniques,regions%20that%20regulate%20threat%20response.',
-    },
-    {
-        id: '2',
-        title: 'Six Ways Happiness is Good for your health',
-        source: 'Berkeley University',
-        date: '07/08/2021',
-        link: 'https://greatergood.berkeley.edu/article/item/six_ways_happiness_is_good_for_your_health'
-    },
-    {
-        id: '3',
-        title: 'Learning to Like Disgust',
-        source: 'National Library of Medicine',
-        date: '07/02/2021',
-        link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3703531/'
-    },
-    {
-        id: '4',
-        title: 'We are all Mad as Hell, Thanks to Late Stage Capitalism',
-        source: 'GEN',
-        date: '04/03/2020',
-        link: 'https://gen.medium.com/were-all-mad-as-hell-thanks-to-late-capitalism-1c0dedb41ce9'
-    },
-    {
-      id: '5',
-      title: 'We are all Mad as Hell, Thanks to Late Stage Capitalism',
-      source: 'GEN',
-      date: '04/03/2020',
-      link: 'https://gen.medium.com/were-all-mad-as-hell-thanks-to-late-capitalism-1c0dedb41ce9'
-   },
-   {
-    id: '6',
-    title: 'We are all Mad as Hell, Thanks to Late Stage Capitalism',
-    source: 'GEN',
-    date: '04/03/2020',
-    link: 'https://gen.medium.com/were-all-mad-as-hell-thanks-to-late-capitalism-1c0dedb41ce9'
- },
-];
+let DATA = [];
+
 const Mood = ({nm}) => {
   let content
   if (nm == 'sadness') {
+    axios.get('https://app.scrapingbee.com/api/v1/store/google', {
+    params: {
+        'api_key': 'xxx',
+        'search': 'How to reduce sadness',
+    }
+}).then(function (response) {
+  DATA = [];
+  for(let i = 1; i < 6; i++)
+   {
+      let item = {};
+      item.id = i+1;
+      item.title = response.data.organic_results[i].title;
+      item.link = response.data.organic_results[i].url;
+      DATA.push(item);
+      
+
+    }
+
+}).catch(error => {throw error})
     content = <Text style={{marginTop: 25,
       color: "blue",
       alignSelf: 'center',
-      //fontFamily: 'LexendExa-Regular',
+      fontFamily: 'LexendExa-Regular',
       fontSize: 25,
       marginLeft: 15,
       marginRight: 15 }}>Sad</Text>
   } else if (nm == "joy") {
+    axios.get('https://app.scrapingbee.com/api/v1/store/google', {
+    params: {
+        'api_key': 'xxx',
+        'search': 'How to stay happy',
+    }
+}).then(function (response) {
+  DATA = [];
+  for(let i = 1; i < 6; i++) {
+      let item = {};
+      item.id = i+1;
+      item.title = response.data.organic_results[i].title;
+      item.link = response.data.organic_results[i].url;
+      DATA.push(item);
+    }
+}).catch(error => {throw error})
     content = <Text style={{ marginTop: 25,
       color: "orange",
       alignSelf: 'center',
-      //fontFamily: 'LexendExa-Regular',
+      fontFamily: 'LexendExa-Regular',
       fontSize: 25,
       marginLeft: 15,
       marginRight: 15  }}>Happy</Text>
   } else if (nm == 'anger') {
+    axios.get('https://app.scrapingbee.com/api/v1/store/google', {
+    params: {
+        'api_key': 'xxx',
+        'search': 'How to reduce anger',
+    }
+}).then(function (response) {
+  DATA = [];
+  for(let i = 1; i < 6; i++) {
+      let item = {};
+      item.id = i+1;
+      item.title = response.data.organic_results[i].title;
+      item.link = response.data.organic_results[i].url;
+      DATA.push(item);
+    }
+}).catch(error => {throw error})
     content = <Text style={{ marginTop: 25,
       color: "red",
       alignSelf: 'center',
-      //fontFamily: 'LexendExa-Regular',
+      fontFamily: 'LexendExa-Regular',
       fontSize: 25,
       marginLeft: 15,
       marginRight: 15  }}>Angry</Text>
   }
   else if (nm == 'disgust') {
+    axios.get('https://app.scrapingbee.com/api/v1/store/google', {
+    params: {
+        'api_key': 'xxx',
+        'search': 'How to reduce feelings of disgust',
+    }
+}).then(function (response) {
+  DATA = [];
+  for(let i = 1; i < 6; i++) {
+      let item = {};
+      item.id = i+1;
+      item.title = response.data.organic_results[i].title;
+      item.link = response.data.organic_results[i].url;
+      DATA.push(item);
+    }
+}).catch(error => {throw error})
     content = <Text style={{ marginTop: 25,
       color: "green",
       alignSelf: 'center',
-      //fontFamily: 'LexendExa-Regular',
+      fontFamily: 'LexendExa-Regular',
       fontSize: 25,
       marginLeft: 15,
       marginRight: 15  }}>Disgusted</Text>
   }
   else if (nm == 'fear') {
+    axios.get('https://app.scrapingbee.com/api/v1/store/google', {
+    params: {
+        'api_key': 'xxx',
+        'search': 'How to reduce fear',
+    }
+}).then(function (response) {
+  DATA = [];
+  for(let i = 1; i < 6; i++) {
+      let item = {};
+      item.id = i+1;
+      item.title = response.data.organic_results[i].title;
+      item.link = response.data.organic_results[i].url;
+      DATA.push(item);
+    }
+}).catch(error => {throw error})
     content = <Text style={{ marginTop: 25,
       color: "purple",
       alignSelf: 'center',
-     // fontFamily: 'LexendExa-Regular',
+     fontFamily: 'LexendExa-Regular',
       fontSize: 25,
       marginLeft: 15,
       marginRight: 15  }}>Fearful</Text>
   }
   else if (nm == 'surprise') {
+    axios.get('https://app.scrapingbee.com/api/v1/store/google', {
+    params: {
+        'api_key': 'xxx',
+        'search': 'surprised',
+    }
+}).then(function (response) {
+  DATA = [];
+  for(let i = 1; i < 6; i++) {
+      let item = {};
+      item.id = i+1;
+      item.title = response.data.organic_results[i].title;
+      item.link = response.data.organic_results[i].url;
+      DATA.push(item);
+    }
+}).catch(error => {throw error})
     content = <Text style={{ marginTop: 25,
       color: "brown",
       alignSelf: 'center',  
-     // fontFamily: 'LexendExa-Regular',
+     fontFamily: 'LexendExa-Regular',
       fontSize: 25,
       marginLeft: 15,
       marginRight: 15  }}>Surprised</Text>
@@ -153,10 +207,28 @@ const Mood = ({nm}) => {
 //   }
 //   //console.log(DATA);
 // })
-const Item = ({ item, onPress, backgroundColor, textColor }) => (
+let addArticle = journalEntry => {
+  database().ref('/Values').push({
+    name: journalEntry,
+    
+  }); 
+}
+  
+  let addArray = journalEntry => {
+    database().ref('/Arrays').push({
+      name: journalEntry,
+      
+    });
+};
+
+
+
+
+const Item = ({ item,onPress, backgroundColor, textColor }) => (
   <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
     <Text style={[styles.title]}>{item.title}</Text>
-    <Text style={[styles.source, textColor]}>{item.source}</Text>
+    <Button  style  = {[styles.buttonText]} title = "Save"/>
+    {/* <Text style={[styles.source, textColor]}>{item.source}</Text> */}
   </TouchableOpacity>
 );
 
@@ -216,14 +288,14 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   title: {
-   //fontFamily: 'LexendExa-Regular',
+   fontFamily: 'LexendExa-Regular',
     fontSize: 15,
   },
   text: {
     marginTop: 55,
     alignSelf: 'center',
-   //fontFamily: 'LexendExa-Regular',
-    color: '00352F',
+   fontFamily: 'LexendExa-Regular',
+    color: '#00352F',
     fontSize: 9,
     marginBottom: 10,
     marginLeft: 15,
@@ -232,7 +304,7 @@ const styles = StyleSheet.create({
 mood: {
   marginTop: 60,
   alignSelf: 'center',
- //fontFamily: 'LexendExa-Regular',
+ fontFamily: 'LexendExa-Regular',
   fontSize: 15,
   marginLeft: 15,
   marginRight: 15
@@ -240,18 +312,18 @@ mood: {
 heading: {
   marginVertical: 20,
   alignSelf: 'center',
-  //fontFamily: 'LexendExa-Regular',
-  color: '00352F',
+  fontFamily: 'LexendExa-Regular',
+  color: '#00352F',
   fontSize: 20,
   marginLeft: 15,
   marginRight: 15
 },
   source: {
-   //fontFamily: 'LexendExa-Regular',
+   fontFamily: 'LexendExa-Regular',
     fontSize: 10,
   },
   Saved: {
-   //fontFamily: 'LexendExa-Regular',
+   fontFamily: 'LexendExa-Regular',
     alignSelf: 'center',
     color: 'black',
     fontSize: 20,
@@ -280,14 +352,14 @@ appButtonText: {
   fontSize: 18,
   color: "white",
   fontWeight: "bold",
- //fontFamily: 'LexendExa-Regular',
+ fontFamily: 'LexendExa-Regular',
   alignSelf: "center",
 },
 text3: {
   top: 50,
   alignSelf: 'center',
- //fontFamily: 'LexendExa-Regular',
-  color: '00352F',
+ fontFamily: 'LexendExa-Regular',
+  color: '#00352F',
   fontSize: 25,
   marginLeft: 25,
   marginRight: 25
@@ -295,8 +367,8 @@ text3: {
 text2: {
 top: 60,
 alignSelf: 'center',
-//fontFamily: 'LexendExa-Regular',
-color: '00352F',
+fontFamily: 'LexendExa-Regular',
+color: '#00352F',
 fontSize: 25,
 marginLeft: 25,
 marginRight: 25
@@ -304,10 +376,13 @@ marginRight: 25
 text1: {
 top: 30,
 alignSelf: 'center',
-//fontFamily: 'LexendExa-Regular',
-color: '00352F',
+fontFamily: 'LexendExa-Regular',
+color: '#00352F',
 fontSize: 17,
 },
+buttonText: {
+  fontFamily: 'LexendExa-Regular',
+  color: '#fff',
+}
 });
 export default Analysis;
-

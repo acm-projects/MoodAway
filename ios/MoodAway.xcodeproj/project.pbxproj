@@ -17,6 +17,7 @@
 		3928190AAE324B67B44C0A82 /* LexendExa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F0EA513CD8442CE8E502C38 /* LexendExa-Medium.ttf */; };
 		4C190C7B290A230700D55268 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C190C7A290A230600D55268 /* GoogleService-Info.plist */; };
 		4C190C7C290A230700D55268 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C190C7A290A230600D55268 /* GoogleService-Info.plist */; };
+		4C59256E293554AD00A8FD9E /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 4C59256D293554AD00A8FD9E /* Fonts */; };
 		60E7550BBFBEBE9658F5CE18 /* libPods-MoodAway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7EFC8D0A3920EAA28EB1A9 /* libPods-MoodAway.a */; };
 		63F61A45BBB343F5B84858C0 /* LexendExa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F33DEFDD60A541E28F789197 /* LexendExa-SemiBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -48,22 +49,23 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MoodAway/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MoodAway/main.m; sourceTree = "<group>"; };
 		2CEF9E469D4F7017315A0274 /* Pods-MoodAway-MoodAwayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAway-MoodAwayTests.release.xcconfig"; path = "Target Support Files/Pods-MoodAway-MoodAwayTests/Pods-MoodAway-MoodAwayTests.release.xcconfig"; sourceTree = "<group>"; };
-		3E80915AB6644F20A0346B41 /* LexendExa-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-ExtraBold.ttf"; path = "../assets/fonts/LexendExa-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3E80915AB6644F20A0346B41 /* LexendExa-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-ExtraBold.ttf"; path = "../assets/fonts/LexendExa-ExtraBold.ttf"; sourceTree = "<group>"; };
 		4C190C7A290A230600D55268 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4C59256D293554AD00A8FD9E /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		4FEFE5A312F87245F36014E1 /* libPods-MoodAway-MoodAwayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoodAway-MoodAwayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6986A9ED86284DCE85791060 /* LexendExa-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Light.ttf"; path = "../assets/fonts/LexendExa-Light.ttf"; sourceTree = "<group>"; };
-		7F0EA513CD8442CE8E502C38 /* LexendExa-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Medium.ttf"; path = "../assets/fonts/LexendExa-Medium.ttf"; sourceTree = "<group>"; };
+		6986A9ED86284DCE85791060 /* LexendExa-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Light.ttf"; path = "../assets/fonts/LexendExa-Light.ttf"; sourceTree = "<group>"; };
+		7F0EA513CD8442CE8E502C38 /* LexendExa-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Medium.ttf"; path = "../assets/fonts/LexendExa-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MoodAway/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		83EACF24573543DD9AE899F7 /* LexendExa-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Bold.ttf"; path = "../assets/fonts/LexendExa-Bold.ttf"; sourceTree = "<group>"; };
-		86B49CAF5ACF4A5AB83EED4B /* LexendExa-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-ExtraLight.ttf"; path = "../assets/fonts/LexendExa-ExtraLight.ttf"; sourceTree = "<group>"; };
-		A9DFE96FCA7349DA817E1807 /* LexendExa-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Black.ttf"; path = "../assets/fonts/LexendExa-Black.ttf"; sourceTree = "<group>"; };
+		83EACF24573543DD9AE899F7 /* LexendExa-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Bold.ttf"; path = "../assets/fonts/LexendExa-Bold.ttf"; sourceTree = "<group>"; };
+		86B49CAF5ACF4A5AB83EED4B /* LexendExa-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-ExtraLight.ttf"; path = "../assets/fonts/LexendExa-ExtraLight.ttf"; sourceTree = "<group>"; };
+		A9DFE96FCA7349DA817E1807 /* LexendExa-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Black.ttf"; path = "../assets/fonts/LexendExa-Black.ttf"; sourceTree = "<group>"; };
 		AD7EFC8D0A3920EAA28EB1A9 /* libPods-MoodAway.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoodAway.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD3FC7EC2129464DA67F4031 /* LexendExa-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Thin.ttf"; path = "../assets/fonts/LexendExa-Thin.ttf"; sourceTree = "<group>"; };
+		CD3FC7EC2129464DA67F4031 /* LexendExa-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Thin.ttf"; path = "../assets/fonts/LexendExa-Thin.ttf"; sourceTree = "<group>"; };
 		D4757070E71E6A5E503C3652 /* Pods-MoodAway-MoodAwayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAway-MoodAwayTests.debug.xcconfig"; path = "Target Support Files/Pods-MoodAway-MoodAwayTests/Pods-MoodAway-MoodAwayTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D7DE109A755542EEA2304006 /* LexendExa-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Regular.ttf"; path = "../assets/fonts/LexendExa-Regular.ttf"; sourceTree = "<group>"; };
+		D7DE109A755542EEA2304006 /* LexendExa-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-Regular.ttf"; path = "../assets/fonts/LexendExa-Regular.ttf"; sourceTree = "<group>"; };
 		E443FF64BD81070947291DE5 /* Pods-MoodAway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAway.debug.xcconfig"; path = "Target Support Files/Pods-MoodAway/Pods-MoodAway.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F33DEFDD60A541E28F789197 /* LexendExa-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-SemiBold.ttf"; path = "../assets/fonts/LexendExa-SemiBold.ttf"; sourceTree = "<group>"; };
+		F33DEFDD60A541E28F789197 /* LexendExa-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LexendExa-SemiBold.ttf"; path = "../assets/fonts/LexendExa-SemiBold.ttf"; sourceTree = "<group>"; };
 		FA84ED6BAF30ED9A34A06CC3 /* Pods-MoodAway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodAway.release.xcconfig"; path = "Target Support Files/Pods-MoodAway/Pods-MoodAway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				4C190C7A290A230600D55268 /* GoogleService-Info.plist */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				4C59256D293554AD00A8FD9E /* Fonts */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -185,7 +188,6 @@
 				CD3FC7EC2129464DA67F4031 /* LexendExa-Thin.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +291,7 @@
 				4C190C7B290A230700D55268 /* GoogleService-Info.plist in Resources */,
 				FC0035F3E62D4CA89CBA785E /* LexendExa-Black.ttf in Resources */,
 				0B60DDA6BC7845ADBB074B1C /* LexendExa-Bold.ttf in Resources */,
+				4C59256E293554AD00A8FD9E /* Fonts in Resources */,
 				CCEBF5A30DB6479FAD18BE7A /* LexendExa-ExtraBold.ttf in Resources */,
 				249FE7BBFC0B480D94C4C553 /* LexendExa-ExtraLight.ttf in Resources */,
 				EB67A01794F741409198D8E0 /* LexendExa-Light.ttf in Resources */,
