@@ -1,6 +1,10 @@
 # MoodAway
 A lot of people tend to express their emotions by journaling. This online journal will run a sentiment analysis on your journal entry and according to the mood detected, methods will be suggested to help better your mood! 
-​
+
+​![3](https://github.com/user-attachments/assets/60040b80-1b4d-4248-9a26-04067afb7b0d)
+![5](https://github.com/user-attachments/assets/b90298d9-eaff-4513-90e3-c0017b16f0e8)
+![5 (1)](https://github.com/user-attachments/assets/3e4f1ad7-5e3f-4f0c-9986-24f6f6de0342)
+
 # MVP
 - User will be able to write a journal entry for each day
 - Once the sentiment analysis is run, according to the result, the user is allowed to confirm the sentiment predicted 
